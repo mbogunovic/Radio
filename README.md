@@ -1,4 +1,4 @@
-# RSOK RADIO
+# RSOK RADIO (POGODI BROJ APLIKACIJA)
 Zadatak radjen na kolokvijumu predmeta Razvoj Softvera Otvorenog Koda datuma 24.06.2019. godine.
 
 # Softverski sabloni
