@@ -28,12 +28,19 @@ namespace Radio.Core.Context
             _points = MaxNoOfMistakes * 100;
         }
 
+        /// <summary>
+        /// Sets entered number
+        /// </summary>
+        /// <param name="enteredNumber">Integer value</param>
         public void SetEnteredNumber(int enteredNumber) =>
             _enteredNumber = enteredNumber;
 
         public void SetNumberState(NumberState state) =>
             _state = state;
 
+        /// <summary>
+        /// Generates target number with Random class
+        /// </summary>
         private void GenerateTargetNumber() =>
             _targetNumber = new Random().Next(1, _upperLimit);
 

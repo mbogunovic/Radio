@@ -17,6 +17,7 @@ namespace Radio.App
 
             InitializeComponent();
 
+            //hide labels for second "form"
             lblPoints.Hide();
             btnEnterNumber.Hide();
             lblNumber.Hide();
@@ -34,6 +35,7 @@ namespace Radio.App
                     _context.SetUpperLimit(limitNumber);
                 }
 
+                //hide first "form" show "form" for submitting number
                 btnEnterLimit.Hide();
                 lblUpperLimit.Hide();
                 tbxNumberLimit.Hide();
@@ -48,6 +50,7 @@ namespace Radio.App
             var enteredNumber = 0;
             if (int.TryParse(tbxNumber.Text, out enteredNumber))
             {
+                // if entered number is a valid number and greater than 1 do operation guess number
                 if (enteredNumber >= 1)
                 {
                     _context.SetEnteredNumber(enteredNumber);
