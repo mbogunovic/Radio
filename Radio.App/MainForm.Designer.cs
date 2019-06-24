@@ -37,6 +37,7 @@
             this.tbxNumber = new System.Windows.Forms.TextBox();
             this.lblNumber = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
+            this.lblPoints = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,11 +102,21 @@
             this.lblStatus.TabIndex = 6;
             this.lblStatus.Text = "label1";
             // 
+            // lblPoints
+            // 
+            this.lblPoints.AutoSize = true;
+            this.lblPoints.Location = new System.Drawing.Point(370, 45);
+            this.lblPoints.Name = "lblPoints";
+            this.lblPoints.Size = new System.Drawing.Size(35, 13);
+            this.lblPoints.TabIndex = 7;
+            this.lblPoints.Text = "label1";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(474, 262);
+            this.Controls.Add(this.lblPoints);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnEnterNumber);
             this.Controls.Add(this.tbxNumber);
@@ -131,6 +142,7 @@
         private System.Windows.Forms.TextBox tbxNumber;
         private System.Windows.Forms.Label lblNumber;
         private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblPoints;
     }
 }
 
