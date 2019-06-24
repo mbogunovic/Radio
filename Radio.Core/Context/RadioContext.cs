@@ -11,18 +11,21 @@ namespace Radio.Core.Context
         private int _noOfMistakes;
         private int _enteredNumber;
         private NumberState _state;
+        private int _points;
 
         public int UpperLimit => _upperLimit;
         public int TargetNumber => _targetNumber;
         public int NoOfMistakes => _noOfMistakes;
         public int MaxNoOfMistakes => (_targetNumber / 5) + 5;
         public int EnteredNumber => _enteredNumber;
+        public int Points => _points;
 
         public NumberState State => _state;
 
         public void SetUpperLimit(int upperLimit) {
             _upperLimit = upperLimit;
             GenerateTargetNumber();
+            _points = MaxNoOfMistakes * 100;
         }
 
         public void SetEnteredNumber(int enteredNumber) =>
@@ -36,5 +39,8 @@ namespace Radio.Core.Context
 
         public void SetNoOfMistakes(int noOfMistakes) =>
             _noOfMistakes = noOfMistakes;
+
+        public void SetPoints(int points) =>
+            _points = points;
     }
 }

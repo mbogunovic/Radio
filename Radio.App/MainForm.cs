@@ -17,6 +17,7 @@ namespace Radio.App
 
             InitializeComponent();
 
+            lblPoints.Hide();
             btnEnterNumber.Hide();
             lblNumber.Hide();
             tbxNumber.Hide();
@@ -52,6 +53,7 @@ namespace Radio.App
                     _context.SetEnteredNumber(enteredNumber);
                     RadioOperationFactory.Instance.Operation(RadioOperation.GuessNumber)
                        .Execute(_context);
+                    lblPoints.Text = _context.Points.ToString();
 
                     switch (_context.State)
                     {
@@ -73,6 +75,7 @@ namespace Radio.App
                             break;
                     }
 
+                    lblPoints.Show();
                     lblStatus.Show();
                 }
             }
